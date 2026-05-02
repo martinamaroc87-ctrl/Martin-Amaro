@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-minedu-red: #C62828;
+  --color-minedu-dark: #b71c1c;
+  --color-sidebar-bg: #1e293b;
+  --color-sidebar-hover: #334155;
+  --color-bg-light: #f1f5f9;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-light text-slate-900 font-sans;
+  }
+}
+
+@layer components {
+  .grade-select {
+    @apply w-full p-1.5 border border-slate-200 rounded bg-white outline-none font-bold cursor-pointer text-center text-sm transition-all;
+  }
+  
+  .grade-select:focus {
+    @apply border-minedu-red ring-2 ring-red-500/20;
+  }
+
+  .doc-oficial {
+    @apply max-w-[900px] mx-auto bg-white p-10 relative shadow-lg;
+  }
+
+  table {
+    @apply w-full border-collapse mt-2 text-[0.85rem];
+  }
+
+  th, td {
+    @apply border border-slate-300 p-2 text-left;
+  }
+
+  th {
+    @apply bg-slate-50 font-semibold text-slate-900 text-center;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+  }
+  .doc-oficial {
+    box-shadow: none !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+  table {
+    font-size: 10px !important;
+  }
+  th {
+    background-color: #e2e8f0 !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact;
+  }
+}

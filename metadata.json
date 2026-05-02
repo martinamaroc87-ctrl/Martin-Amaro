@@ -1,0 +1,6 @@
+{
+  "name": "EduBoleta PRO",
+  "description": "Sistema de gestión de evaluaciones escolares con exportación a Excel y generación de boletas oficiales con QR.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
